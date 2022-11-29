@@ -1,0 +1,16 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if current_user %>
+  <h1> <%= current_user.email %> </h1>
+  <p> Logado</p>
+  <p> voce é um: <%= current_user.role%></p>
+  <%if current_user.admin?%>
+    Tem <%= User.count%> usuarios registrados
+  <%end%>
+  <%= link_to "Sair",destroy_user_session_path,'data-turbo-method': :delete%>
+<% else %>
+  <p> deslogado</p>
+  <%= link_to "Cadastrar",new_user_registration_path%>
+  <%= link_to "Logar",new_user_session_path%>
+<% end %>

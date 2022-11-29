@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pensaments</h1>
+
+<div id="pensaments">
+  <% @pensaments.each do |pensament| %>
+    <%= render pensament %>
+    <p>
+      <%= link_to "Show this pensament", pensament %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New pensament", new_pensament_path %>

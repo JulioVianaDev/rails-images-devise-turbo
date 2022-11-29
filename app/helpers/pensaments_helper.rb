@@ -1,0 +1,2 @@
+module PensamentsHelper
+end

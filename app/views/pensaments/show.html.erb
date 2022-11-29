@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pensament %>
+
+<div>
+  <%= link_to "Edit this pensament", edit_pensament_path(@pensament) %> |
+  <%= link_to "Back to pensaments", pensaments_path %>
+
+  <%= button_to "Destroy this pensament", @pensament, method: :delete %>
+</div>

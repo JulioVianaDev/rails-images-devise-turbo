@@ -1,0 +1,14 @@
+<div id="<%= dom_id pensament %>">
+  <p>
+    <strong>User:</strong>
+    <%= pensament.user_id %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= pensament.description %>
+  </p>
+    <% pensament.photos.each do |photo|%>
+      <%= image_tag(photo, :width => 200)%>
+    <%end%>
+</div>
